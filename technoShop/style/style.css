@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Jura', sans-serif;
+}
+
+body{
+	background: #d9d7cd;
+	height: 250vh;
+}
+
+.logo img{
+	margin-left: 35px;
+	float: left;
+	width: 170px;
+	height: auto;
+}
+
+.wrapper{
+	display: flex;
+	position: relative;
+}
+
+.wrapper .side{
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	background: #edeae1;
+	padding: 30px 0;
+}
+
+.wrapper .side ul{
+	margin-top: 170px;
+}
+
+.wrapper .side ul li{
+	color: black;
+	text-align: center;
+	padding:  25px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.wrapper .side ul li a{
+	color: black;
+	display: block;
+}
+
+.slideshow{
+	width: 100%;
+	height: 100vh;
+	position: relative;	
+	margin-left: 250px;
+	overflow: hidden;
+}
+
+.slideshow-item{
+	/*margin-top: 90px;*/
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	animation: cycleImages 31s infinite ;
+	opacity: 0%;
+}
+
+.slideshow-item img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	animation: zoom 31s infinite ;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img{
+	animation-delay: 0s;
+}
+
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img{
+	animation-delay: 10s;
+}
+
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img{
+	animation-delay: 20s;
+}
+
+.slideshow-item-text{
+	max-width: 50%;
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	transform: translate(-50%);
+	background-color: rgba(0,0,0,.8);
+	color: #fff;
+	padding: 20px 10px;
+	font-size: 10rem 5rem;
+}
+
+.slideshow-item-text h5{
+	font-size: 30px;
+	letter-spacing: 3px;
+	margin-bottom: 1rem;
+}
+
+.slideshow-item-text p{
+	font-size: 15px;
+	letter-spacing: 1px;
+	margin-bottom: 2.5rem;
+}
+
+@keyframes cycleImages{
+	25%{
+		opacity: 1;
+	}
+	40%{
+		opacity: 0;
+	}
+}
+
+@keyframes zoom{
+	100%{
+		transform: scale(1.2);
+	}
+}
+
+@media screen and(max-width: 1000px){
+	.slideshow-item-text{
+		max-width: 70%;
+		padding: 10px 1px; 
+	}
+
+	.slideshow-item-text h5{
+		font-size: 20px; 
+	}
+}
+
+.content {
+    position: absolute;
+	margin-top: 105vh;
+	width:100%;
+	margin-left: 7%;
+	padding: 20px;
+}
+
+section {
+      padding: 20px 0;
+}
+
+.section-index {
+      color: #d3ae87;
+      font-weight: bolder;
+      font-size: 20px;
+      font-family: Poppins !important;
+
+}
+
+.section-heading {
+      color: grey;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 15px;
+      padding-bottom: 10px;
+}
+.section-subheading{
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+.section-info {
+      font-size: 18px;
+      color: grey;
+      /*padding-bottom: 10px;*/
+}
+
+.more {
+      margin: 40px 0;
+}
+
+button {
+      background: none;
+      border: .3pt solid rgba(184, 140, 93, 0.7);
+      text-transform: uppercase !important;
+      font-size: 12px !important;
+      letter-spacing: 2px;
+      padding: 18px 36px;
+}
+
+button{
+	cursor: pointer;
+}
+
+.container{
+	width: 100%;
+	margin-top: 10%;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+
+}
+
+.container h2{
+	margin-left: 200px;
+	background: grey;
+	color: #fff;
+	width: 200px;
+	font-size: 24px;
+	padding: 5px;
+	height: 40px;
+}
+
+.row{
+	margin-top: 30px;
+}
+
+img{
+	width: 100%;
+}
+
+.product-bottom .fa{
+	color: #28a745;
+	font-size: 10px;
+}
+
+.product-bottom h3{
+	font-size: 20px;
+}
+
+.product-bottom h5{
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+.overlay{
+	display: block;
+	opacity: 0;
+	position: absolute;
+	top: 10%;
+	margin-left: 0;
+	width: 70px;
+}
+
+.product-top:hover .overlay{
+	opacity: 1;
+	margin-left: 5%;
+	transition: 0.5s;
+	/*cursor: pointer;*/
+}
+
+.col-md-3{
+	transition: transform 0.5s;
+}
+
+.col-md-3:hover{
+	transform: translateY(-5px);
+}
+
+.container h2::after{
+	content: '';
+	border-top: 40px solid grey;
+	border-right: 40px solid transparent;
+	position: relative;
+	left: 30px;
+	top: 35px;
+}
+
+.container .row{
+	margin-left: 200px;
+	font-weight: bold;
+}
+
+.product-top img{
+	width: 180px;
+}
